@@ -39,7 +39,6 @@
       text-align: center;
       animation: fadeIn 3s ease-in-out;
       z-index: 1;
-      flex-wrap: wrap;
     }
 
     .time-box {
@@ -116,3 +115,61 @@
       0% { transform: translateY(100vh) rotate(45deg); opacity: 1; }
       100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
     }
+
+    /* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .countdown {
+    gap: 10px;
+    font-size: 1.2rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  .time-box {
+    min-width: 70px;
+    padding: 15px;
+  }
+
+  .love-note {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  .heart {
+    width: 15px;
+    height: 15px;
+  }
+
+  .heart::before,
+  .heart::after {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .countdown {
+    font-size: 1rem;
+  }
+
+  .time-box {
+    padding: 10px;
+    min-width: 60px;
+  }
+
+  .love-note {
+    font-size: 1rem;
+  }
+}
