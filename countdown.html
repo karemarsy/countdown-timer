@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Countdown to Our Special Day</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1>I can't wait to see you Darling 💖</h1>
   <div class="countdown" id="countdown">
@@ -52,6 +54,7 @@
     updateCountdown();
 
     const hearts = document.getElementById('hearts');
+
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -63,4 +66,5 @@
     setInterval(createHeart, 400);
   </script>
 </body>
+
 </html>
