@@ -39,6 +39,7 @@
       text-align: center;
       animation: fadeIn 3s ease-in-out;
       z-index: 1;
+      flex-wrap: wrap;
     }
 
     .time-box {
