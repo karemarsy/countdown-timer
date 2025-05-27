@@ -1,0 +1,116 @@
+   body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('us.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Cursive', sans-serif;
+      overflow: hidden;
+      color: #fff;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+      z-index: 1;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+      z-index: 1;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      min-width: 80px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .label {
+      font-size: 1rem;
+      margin-top: 5px;
+      color: #ffd6e8;
+    }
+
+    .love-note {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      text-align: center;
+      max-width: 600px;
+      color: #ffe6f0;
+      animation: fadeIn 4s ease-in-out;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ee6ca4;
+      transform: rotate(45deg);
+      animation: float 8s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ee6ca4;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+    }
